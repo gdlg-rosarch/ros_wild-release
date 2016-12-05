@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import argparse
+from genpy.message import strify_message
+
+import sys
+import rospy
+import rostopic
+from ros_wild.subscriber import EchoSubscriber
+
+
+def callback(msg, topic_name):
+    echo_msg = """---
+topic: {}
+type: {}
+
+{}
+""".format(topic_name, rostopic.get_topic_type(topic_name)[0], strify_message(msg))
+    sys.stdout.write(echo_msg)
+
+
+def echo(topic_name):
+    rospy.init_node("ros_wild_topic", anonymous=True)
+    EchoSubscriber(topic_name, callback)
+    rospy.spin()
+
+
+def main():
+    parser = argparse.ArgumentParser(description='ros_wild echo')
+    parser.add_argument("topic_name", type=str,
+                        help="Regular expression of topic name to subscribe.")
+    args = parser.parse_args()
+    echo(args.topic_name)
+
+if __name__ == '__main__':
+    main()
