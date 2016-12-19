@@ -1,0 +1,45 @@
+ros-kinetic-ros-wild (0.5.0-0xenial) xenial; urgency=high
+
+  * Fix CMakeLists.txt
+  * Release package
+
+ -- Yuma Mihira <yuma-m@users.noreply.github.com>  Tue, 13 Dec 2016 15:00:00 -0000
+
+ros-kinetic-ros-wild (0.4.2-0xenial) xenial; urgency=high
+
+  * Add tests for publisher and subscriber
+  * Add topics_with/without_callback method for subscriber
+
+ -- Yuma.M <yuma-m@users.noreply.github.com>  Thu, 17 Nov 2016 15:00:00 -0000
+
+ros-kinetic-ros-wild (0.4.1-0xenial) xenial; urgency=high
+
+  * Register callback by data class to wildcard subscriber
+
+ -- Yuma Mihira <yuma-m@users.noreply.github.com>  Wed, 16 Nov 2016 15:00:00 -0000
+
+ros-kinetic-ros-wild (0.4.0-0xenial) xenial; urgency=high
+
+  * Modify publisher and subscriber to create instance without specifying data class
+
+ -- Yuma Mihira <yuma-m@users.noreply.github.com>  Wed, 16 Nov 2016 15:00:00 -0000
+
+ros-kinetic-ros-wild (0.3.0-0xenial) xenial; urgency=high
+
+  * Create a node to echo topics
+
+ -- Yuma Mihira <yuma-m@users.noreply.github.com>  Wed, 09 Nov 2016 15:00:00 -0000
+
+ros-kinetic-ros-wild (0.2.0-0xenial) xenial; urgency=high
+
+  * Create wildcard publisher
+
+ -- Yuma Mihira <yuma-m@users.noreply.github.com>  Wed, 09 Nov 2016 15:00:00 -0000
+
+ros-kinetic-ros-wild (0.1.0-0xenial) xenial; urgency=high
+
+  * Create wildcard subscriber
+
+ -- Yuma Mihira <yuma-m@users.noreply.github.com>  Tue, 08 Nov 2016 15:00:00 -0000
+
+
