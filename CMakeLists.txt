@@ -7,18 +7,24 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_python_setup()
 
-catkin_package(
-)
+catkin_package()
 
 ###########
 ## Build ##
 ###########
 
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
 
 #############
 ## Install ##
 #############
 
+install(PROGRAMS
+  scripts/echo
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 #############
 ## Testing ##
